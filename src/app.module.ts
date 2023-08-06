@@ -6,6 +6,8 @@ import { Post } from './typeorm/entities/Post';
 import { Profile } from './typeorm/entities/Profile';
 import { User } from './typeorm/entities/User';
 import { UsersModule } from './users/users.module';
+import { Picture } from './typeorm/entities/Picture';
+import { PictureModule } from './pictures/pictures.module';
 
 @Module({
   imports: [
@@ -13,13 +15,14 @@ import { UsersModule } from './users/users.module';
       type: 'mysql',
       host: 'localhost',
       port: 3306,
-      username: '',
-      password: '',
-      database: '',
-      entities: [User, Profile, Post],
+      username: 'root',
+      password: 'theGreat@123',
+      database: 'artOriginal',
+      entities: [User, Profile, Post, Picture],
       synchronize: true,
     }),
     UsersModule,
+    PictureModule,
   ],
   controllers: [AppController],
   providers: [AppService],

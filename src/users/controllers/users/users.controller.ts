@@ -14,7 +14,7 @@ import { CreateUserProfileDto } from '../../dtos/CreateUserProfile.dto';
 import { UpdateUserDto } from '../../dtos/UpdateUser.dto';
 import { UsersService } from '../../services/users/users.service';
 
-@Controller('users')
+@Controller('pictures')
 export class UsersController {
   constructor(private userService: UsersService) {}
   @Get()
