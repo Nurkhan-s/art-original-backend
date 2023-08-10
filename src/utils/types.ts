@@ -36,7 +36,7 @@ export type CreatePictureParams = {
   year: number;
   type: string;
   size: string;
-  images: string[];
+  pictures: string;
 };
 
 export type EditPictureParams = {
@@ -45,5 +45,5 @@ export type EditPictureParams = {
   year: number;
   type: string;
   size: string;
-  images: string[];
+  pictures: string;
 };
