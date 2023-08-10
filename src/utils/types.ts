@@ -27,7 +27,7 @@ export interface PictureDto {
   type: string;
   size: string;
   id: number;
-  images: string;
+  images: string[];
 }
 
 export type CreatePictureParams = {
@@ -36,7 +36,7 @@ export type CreatePictureParams = {
   year: number;
   type: string;
   size: string;
-  images: string;
+  images: string[];
 };
 
 export type EditPictureParams = {
@@ -45,5 +45,5 @@ export type EditPictureParams = {
   year: number;
   type: string;
   size: string;
-  images: string;
+  images: string[];
 };

@@ -18,7 +18,7 @@ import { PictureModule } from './pictures/pictures.module';
       username: 'root',
       password: 'theGreat@123',
       database: 'artOriginal',
-      entities: [User, Profile, Post, Picture],
+      entities: [User, Profile, Post],
       synchronize: true,
     }),
     UsersModule,

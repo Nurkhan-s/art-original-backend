@@ -17,6 +17,6 @@ export class Picture {
   @Column()
   size: string;
 
-  @Column()
-  images: string;
+  @Column({ array: true })
+  images: string[];
 }

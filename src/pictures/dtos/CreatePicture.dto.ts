@@ -4,5 +4,5 @@ export class CreatePictureDto {
   year: number;
   type: string;
   size: string;
-  images: string;
+  images: string[];
 }
