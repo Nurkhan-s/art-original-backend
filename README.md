@@ -33,7 +33,12 @@ $ npm install
 ```
 
 ## Running the app
-
+```bash
+# start sql service
+$ brew services start mysql
+$ brew services restart mysql
+$ brew services stop mysql
+```
 ```bash
 # development
 $ npm run start
