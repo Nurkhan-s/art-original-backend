@@ -1,4 +1,5 @@
 import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { PictureOrientation } from '../../pictures/dtos/PictureOrientation';
 
 @Entity({ name: 'pictures' })
 export class Picture {
@@ -9,14 +10,20 @@ export class Picture {
   name: string;
 
   @Column()
-  type: string;
+  year: number;
 
   @Column()
-  year: number;
+  author: string;
 
   @Column()
   size: string;
 
   @Column()
-  pictures: string;
+  type: string;
+
+  @Column()
+  price: string;
+
+  @Column()
+  orientation: PictureOrientation;
 }
