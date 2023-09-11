@@ -1,25 +1,28 @@
-import { Module } from '@nestjs/common';
-import { TypeOrmModule } from '@nestjs/typeorm';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { Picture } from './typeorm/entities/Picture';
-import { PictureModule } from './pictures/pictures.module';
+import { Module } from "@nestjs/common";
+import { TypeOrmModule } from "@nestjs/typeorm";
+import { AppController } from "./app.controller";
+import { AppService } from "./app.service";
+import { Picture } from "./typeorm/entities/Picture";
+import { PictureModule } from "./pictures/pictures.module";
+import { UsersModule } from "./users/users.module";
+import { User } from "./users/user.entity";
 
 @Module({
   imports: [
     TypeOrmModule.forRoot({
-      type: 'mysql',
-      host: 'localhost',
+      type: "mysql",
+      host: "localhost",
       port: 3306,
-      username: 'root',
-      password: 'theGreat@123',
-      database: 'artOriginal',
-      entities: [Picture],
-      synchronize: true,
+      username: "root",
+      password: "theGreat@123",
+      database: "artOriginal",
+      entities: [Picture, User],
+      synchronize: true
     }),
     PictureModule,
+    UsersModule
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService]
 })
 export class AppModule {}
