@@ -6,6 +6,7 @@ import { Picture } from "./typeorm/entities/Picture";
 import { PictureModule } from "./pictures/pictures.module";
 import { UsersModule } from "./users/users.module";
 import { User } from "./users/user.entity";
+import { AuthModule } from "./auth/auth.module";
 
 @Module({
   imports: [
@@ -20,7 +21,8 @@ import { User } from "./users/user.entity";
       synchronize: true
     }),
     PictureModule,
-    UsersModule
+    UsersModule,
+    AuthModule
   ],
   controllers: [AppController],
   providers: [AppService]

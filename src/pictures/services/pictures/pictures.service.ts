@@ -1,13 +1,13 @@
-import { HttpException, HttpStatus, Injectable } from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
-import { Picture } from '../../../typeorm/entities/Picture';
-import { CreatePictureParams, EditPictureParams } from '../../../utils/types';
+import { HttpException, HttpStatus, Injectable } from "@nestjs/common";
+import { InjectRepository } from "@nestjs/typeorm";
+import { Repository } from "typeorm";
+import { Picture } from "../../../typeorm/entities/Picture";
+import { CreatePictureParams, EditPictureParams } from "../../../utils/types";
 
 @Injectable()
 export class PicturesService {
   constructor(
-    @InjectRepository(Picture) private pictureRepository: Repository<Picture>,
+    @InjectRepository(Picture) private pictureRepository: Repository<Picture>
   ) {}
 
   findPictures() {
