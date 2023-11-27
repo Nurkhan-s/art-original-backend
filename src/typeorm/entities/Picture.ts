@@ -1,9 +1,9 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
-import { PictureOrientation } from '../../pictures/dtos/PictureOrientation';
+import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { PictureOrientation } from "../../pictures/dtos/PictureOrientation";
 
-@Entity({ name: 'pictures' })
+@Entity({ name: "pictures" })
 export class Picture {
-  @PrimaryGeneratedColumn({ type: 'bigint' })
+  @PrimaryGeneratedColumn({ type: "bigint" })
   id: number;
 
   @Column()

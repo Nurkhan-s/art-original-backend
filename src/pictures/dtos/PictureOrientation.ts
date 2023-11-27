@@ -1,5 +1,5 @@
 export enum PictureOrientation {
-  VERTICAL = 'VERTICAL',
-  HORIZONTAL = 'HORIZONTAL',
-  SQUARE = 'SQUARE',
+  VERTICAL = "VERTICAL",
+  HORIZONTAL = "HORIZONTAL",
+  SQUARE = "SQUARE"
 }

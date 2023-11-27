@@ -3,10 +3,9 @@ import { TypeOrmModule } from "@nestjs/typeorm";
 import { Picture } from "../typeorm/entities/Picture";
 import { PicturesService } from "./services/pictures/pictures.service";
 import { PictureController } from "./controllers/pictures/pictures.controller";
-import { AuthModule } from "../auth/auth.module";
 
 @Module({
-  imports: [TypeOrmModule.forFeature([Picture]), forwardRef(() => AuthModule)],
+  imports: [TypeOrmModule.forFeature([Picture])],
   controllers: [PictureController],
   providers: [PicturesService]
 })
