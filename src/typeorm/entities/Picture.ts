@@ -25,5 +25,8 @@ export class Picture {
   price: string;
 
   @Column()
+  pictures: string;
+
+  @Column()
   orientation: PictureOrientation;
 }

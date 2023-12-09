@@ -22,10 +22,10 @@ export class UpdatePictureDto {
   author: string;
 
   @ApiProperty({
-    example: "Рассвет",
-    description: "Название картинки"
+    example:
+      "https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.indiewire.com%2Ffeatures%2Fgeneral%2Fbaz-luhrmann-the-great-gatsby-underrated-leonardo-dicaprio-carey-mulligan-1201799900%2F&psig=AOvVaw3qL24N30HiEkr9HEE8E8Vm&ust=1692608559049000&source=images&cd=vfe&opi=89978449&ved=0CBAQjRxqFwoTCLD00rLw6oADFQAAAAAdAAAAABAD",
+    description: "Ссылка на картинку"
   })
-  @IsString()
   pictures: string;
 
   @ApiProperty({
